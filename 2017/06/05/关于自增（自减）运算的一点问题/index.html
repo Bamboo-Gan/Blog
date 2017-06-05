@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -95,12 +95,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="silverbamboo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="关于自增和自减运算的一点问题问题的引出先来看一段代码  1234var a = 1;var b = ++a + ++a;console.log(a); // 3console.log(b); //5  分析：这里a的计算过程很简单，第一个a是前置自增，所以一开始参与运算就自己变成2，后面一个a也是一样，但是第二个a的值自增之前已经是2了，所以自增之后就是3，那么赋值给b就是2+3=5了；而a的最终">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于自增（自减）运算的一点问题">
+<meta property="og:url" content="http://yoursite.com/2017/06/05/关于自增（自减）运算的一点问题/index.html">
 <meta property="og:site_name" content="silverbamboo">
+<meta property="og:description" content="关于自增和自减运算的一点问题问题的引出先来看一段代码  1234var a = 1;var b = ++a + ++a;console.log(a); // 3console.log(b); //5  分析：这里a的计算过程很简单，第一个a是前置自增，所以一开始参与运算就自己变成2，后面一个a也是一样，但是第二个a的值自增之前已经是2了，所以自增之后就是3，那么赋值给b就是2+3=5了；而a的最终">
+<meta property="og:updated_time" content="2017-06-05T07:54:28.315Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="silverbamboo">
+<meta name="twitter:title" content="关于自增（自减）运算的一点问题">
+<meta name="twitter:description" content="关于自增和自减运算的一点问题问题的引出先来看一段代码  1234var a = 1;var b = ++a + ++a;console.log(a); // 3console.log(b); //5  分析：这里a的计算过程很简单，第一个a是前置自增，所以一开始参与运算就自己变成2，后面一个a也是一样，但是第二个a的值自增之前已经是2了，所以自增之后就是3，那么赋值给b就是2+3=5了；而a的最终">
 
 
 
@@ -128,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/05/关于自增（自减）运算的一点问题/"/>
 
 
 
 
 
-  <title>silverbamboo</title>
+  <title>关于自增（自减）运算的一点问题 | silverbamboo</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -160,9 +165,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -245,9 +248,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -273,9 +276,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/06/05/关于自增（自减）运算的一点问题/" itemprop="url">关于自增（自减）运算的一点问题</a></h1>
+          <h1 class="post-title" itemprop="name headline">关于自增（自减）运算的一点问题</h1>
         
 
         <div class="post-meta">
@@ -322,8 +323,7 @@
       
 
       
-        
-          <h1 id="关于自增和自减运算的一点问题"><a href="#关于自增和自减运算的一点问题" class="headerlink" title="关于自增和自减运算的一点问题"></a>关于自增和自减运算的一点问题</h1><h2 id="问题的引出"><a href="#问题的引出" class="headerlink" title="问题的引出"></a>问题的引出</h2><p>先来看一段代码 </p>
+        <h1 id="关于自增和自减运算的一点问题"><a href="#关于自增和自减运算的一点问题" class="headerlink" title="关于自增和自减运算的一点问题"></a>关于自增和自减运算的一点问题</h1><h2 id="问题的引出"><a href="#问题的引出" class="headerlink" title="问题的引出"></a>问题的引出</h2><p>先来看一段代码 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">var b = ++a + ++a;</div><div class="line">console.log(a); // 3</div><div class="line">console.log(b); //5</div></pre></td></tr></table></figure>
 <blockquote>
 <p>分析：这里a的计算过程很简单，第一个a是前置自增，所以一开始参与运算就自己变成2，后面一个a也是一样，但是第二个a的值自增之前已经是2了，所以自增之后就是3，那么赋值给b就是2+3=5了；而a的最终值是最后一次自增后的3.</p>
@@ -333,48 +333,78 @@
 <p>分析：这里的第一个a由于是后置自增，按照运算的优先级来说是先进行计算的，第二优先级是前置自增，然后是+,最后才是赋值，但是有个问题：后置自增运算遵循的是递增操作是在整个语句求值之后执行的。那么，首先需要弄清出这里所说的整个语句求值之后具体是指哪个或者哪部分或者是赋值之前的后面所有语句？且按下不表.我们先看这段代码，这么分析，第一个a的值是先不进行自增计算的，也就是+号之前的a = 1，越过+号之后第二个前置自增的a，在没有进行自增之前到底是几？1 or 2？正确应该是2，第一个a在之前没有进行自增运算，但是到了第二个a这里的时候，第一个a遗留的自增运算已经结束，变成2了，那么在此基础上a进行最后一次自增就变成3，即a = 3. b的计算过程是b = 1 + 3 = 4. 这里我们不妨，做一下变换假如第二个a也是后置自增运算呢？那么第二个a参与加法运算的时候就是2，b的值就是 1 + 2 = 3了，而a的值会在加法结束之后自增变成3。</p>
 </blockquote>
 <p>注：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence" target="_blank" rel="external">MDN上关于运算的优先级</a></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/06/05/关于自增（自减）运算的一点问题/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">var b = a++ + a++;</div><div class="line">console.log(a) //3</div><div class="line">console.log(b); //3</div><div class="line">//b = 1 + 2 =3</div><div class="line">//a = 1 + 1 + 1 == &gt; 3</div></pre></td></tr></table></figure>
+<blockquote>
+<p>分析：见上一条分析最后。这里有其他的观点指出后置自增运算可以看作是最后才进行自增运算的，像本例子两个完全一样的a后置自增，认为是1+1之后最后一个a再自增两次变成3的。然而实际并非如此。这里的a的自增运算并非最后一举自增两次形成，而是依次执行的，因而可以说上例说的整个执行语句指的就是，下一个运算符（+）之前的语句。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">var b = ++a + a++;</div><div class="line">console.log(a) //3 1+1+1</div><div class="line">console.log(b); //4</div></pre></td></tr></table></figure>
+<blockquote>
+<p>分析：第一个前置自增a先自增运算后a = 2，下一个a，能参与加法运算的也就是当前的2，所以b赋值是 2+2 =4.而a由于最后一次自增是后置，所以是前面运算完毕之后，在2的基础上自增1，a=3. </p>
+</blockquote>
+<h2 id="验证的时刻-能够鉴别之前想法是否正确"><a href="#验证的时刻-能够鉴别之前想法是否正确" class="headerlink" title="验证的时刻 (能够鉴别之前想法是否正确)"></a>验证的时刻 (能够鉴别之前想法是否正确)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">var b = 2;</div><div class="line">a++;</div><div class="line">var num = ++a + a++ + a + ++b + b++;</div><div class="line">//          3   3     4     3   3</div><div class="line">console.log(num); // 16</div><div class="line">console.log(a); //4</div><div class="line">console.log(b); //4</div></pre></td></tr></table></figure>
+<blockquote>
+<p>分析：声明a变量赋值为1，紧接着a就有一个后置自增运算，幸运的是a没有参与到其他运算中，所以分号之后的a就变成2了。num中第一个前置自增a的值立马变成3，第一个加号之后的a由于是后置自增，在当前运算语句中是不能先自增的所以，此时的a值是前一个a的值即3，那么到第三个a出现的时候，第二个a的自增运算已经完成了，所以此时的a=4，同理可得b的第一个值是3，第二个b当前参与加法运算的值是3，但是运算完之后就自增变成4了。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var i = 1;</div><div class="line">var j = 1;</div><div class="line">var a = i++ + i++ + i++ + i++ + i++ + i++ + i++; // 7个</div><div class="line">//      1 + 2 + 3 + 4 + 5 + 6 + 7</div><div class="line">var b = ++j + ++j + ++j + ++j + ++j + ++j + ++j;</div><div class="line">console.log(a); //28</div><div class="line">console.log(i) //8</div><div class="line">console.log(b); // 2+3+4+5+6+7+8 =35</div><div class="line">console.log(j) // 8</div></pre></td></tr></table></figure>
+<blockquote>
+<p>再来更多一些，由于b的运算比较简单，不再赘述。看看a和i的变化，a总共有i的7次后置自增运算相加，第一个i后置自增，当前是1参与加法运算，后置可以理解为滞后一次自增，即当前参与运算不自增，第二个i累加了上一次i没有进行的自增，变成2，依次类推，a的运算过程是1+2+3+4+5+6+7=28，最后一个i是7，这是参与加法运算的i的值，还有一次后置自增，所以i的值最终结果是8.</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var i = 1;</div><div class="line">var b = i++ + ++i * i++ + i--;</div><div class="line">//var b = i++ + ++i * (i++ + i--);</div><div class="line">//        1       3 * 3     4</div><div class="line">//        1       3 * (3 + 4) </div><div class="line">// i = 3, b = 14</div><div class="line">// i = 3, b = 22</div><div class="line">console.log(i);</div><div class="line">console.log(b);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>再来看一点好玩的，按照运算的优先级，i++(i–) &gt; ++i &gt; <em> &gt; + ,虽然有优先运算规则，但是i的运算过程是自左向右的，i的值是时刻变化的，后置自增遵循滞后一次自增，不难得出b运算中的第一个i是1，那为什么第二个变成了3呢？第二个i前置自增之前就已经是2了，自己再自增一次就变成3了，</em> 后面同样是后置自增，参与运算的自然是前一个i的值3，最后一个i需要先承接上一个i后置自增的后果变成4，等整个加法运算结束之后本身自减1，变成3，所以b的运算过程是1+3 <em> 3+4，i=3.我们可以验证一下i的变化或者自身运算是不是自左向右的，提升最后一个加法的优先级括起来，按照之前的思路分析，得出b的运算过程是1+3</em>(3+4)=22,可以打印一下验证是正确的。</p>
+</blockquote>
+<h5 id="总结：1-后置自增运算是滞后一次自增，当前参与的运算不自增；"><a href="#总结：1-后置自增运算是滞后一次自增，当前参与的运算不自增；" class="headerlink" title="总结：1.后置自增运算是滞后一次自增，当前参与的运算不自增；"></a>总结：1.后置自增运算是滞后一次自增，当前参与的运算不自增；</h5><h5 id="2-同一变量的自增运算过程是自左向右的。"><a href="#2-同一变量的自增运算过程是自左向右的。" class="headerlink" title="2.同一变量的自增运算过程是自左向右的。"></a>2.同一变量的自增运算过程是自左向右的。</h5>
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -382,6 +412,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -401,8 +435,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.png"
@@ -462,6 +505,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于自增和自减运算的一点问题"><span class="nav-number">1.</span> <span class="nav-text">关于自增和自减运算的一点问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题的引出"><span class="nav-number">1.1.</span> <span class="nav-text">问题的引出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#验证的时刻-能够鉴别之前想法是否正确"><span class="nav-number">1.2.</span> <span class="nav-text">验证的时刻 (能够鉴别之前想法是否正确)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#总结：1-后置自增运算是滞后一次自增，当前参与的运算不自增；"><span class="nav-number">1.2.0.0.1.</span> <span class="nav-text">总结：1.后置自增运算是滞后一次自增，当前参与的运算不自增；</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-同一变量的自增运算过程是自左向右的。"><span class="nav-number">1.2.0.0.2.</span> <span class="nav-text">2.同一变量的自增运算过程是自左向右的。</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -582,10 +641,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 

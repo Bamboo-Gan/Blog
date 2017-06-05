@@ -97,7 +97,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="silverbamboo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/javascript/index.html">
 <meta property="og:site_name" content="silverbamboo">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="silverbamboo">
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/tags/javascript/"/>
 
 
 
 
 
-  <title>silverbamboo</title>
+  <title>标签: javascript | silverbamboo</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -160,9 +160,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -245,134 +243,43 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h1>javascript<small>标签</small>
+      </h1>
+    </div>
+
     
       
 
-  
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/05/关于自增（自减）运算的一点问题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Bamboo Gan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="silverbamboo">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/06/05/关于自增（自减）运算的一点问题/" itemprop="url">关于自增（自减）运算的一点问题</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+            <a class="post-title-link" href="/2017/06/05/关于自增（自减）运算的一点问题/" itemprop="url">
               
-                <span class="post-meta-item-text">发表于</span>
+                <span itemprop="name">关于自增（自减）运算的一点问题</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-05T15:22:35+08:00">
-                2017-06-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="关于自增和自减运算的一点问题"><a href="#关于自增和自减运算的一点问题" class="headerlink" title="关于自增和自减运算的一点问题"></a>关于自增和自减运算的一点问题</h1><h2 id="问题的引出"><a href="#问题的引出" class="headerlink" title="问题的引出"></a>问题的引出</h2><p>先来看一段代码 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">var b = ++a + ++a;</div><div class="line">console.log(a); // 3</div><div class="line">console.log(b); //5</div></pre></td></tr></table></figure>
-<blockquote>
-<p>分析：这里a的计算过程很简单，第一个a是前置自增，所以一开始参与运算就自己变成2，后面一个a也是一样，但是第二个a的值自增之前已经是2了，所以自增之后就是3，那么赋值给b就是2+3=5了；而a的最终值是最后一次自增后的3.</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">var b = a++ + ++a;</div><div class="line">console.log(a) // 3</div><div class="line">console.log(b); //4</div><div class="line">//b=  1 + (2+1) </div><div class="line">//a = 1 + 2</div></pre></td></tr></table></figure>
-<blockquote>
-<p>分析：这里的第一个a由于是后置自增，按照运算的优先级来说是先进行计算的，第二优先级是前置自增，然后是+,最后才是赋值，但是有个问题：后置自增运算遵循的是递增操作是在整个语句求值之后执行的。那么，首先需要弄清出这里所说的整个语句求值之后具体是指哪个或者哪部分或者是赋值之前的后面所有语句？且按下不表.我们先看这段代码，这么分析，第一个a的值是先不进行自增计算的，也就是+号之前的a = 1，越过+号之后第二个前置自增的a，在没有进行自增之前到底是几？1 or 2？正确应该是2，第一个a在之前没有进行自增运算，但是到了第二个a这里的时候，第一个a遗留的自增运算已经结束，变成2了，那么在此基础上a进行最后一次自增就变成3，即a = 3. b的计算过程是b = 1 + 3 = 4. 这里我们不妨，做一下变换假如第二个a也是后置自增运算呢？那么第二个a参与加法运算的时候就是2，b的值就是 1 + 2 = 3了，而a的值会在加法结束之后自增变成3。</p>
-</blockquote>
-<p>注：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence" target="_blank" rel="external">MDN上关于运算的优先级</a></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/06/05/关于自增（自减）运算的一点问题/#more" rel="contents">
-              阅读全文 &raquo;
             </a>
-          </div>
-          <!--/noindex-->
         
-      
-    </div>
+      </h2>
 
-    <div>
-      
-    </div>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-06-05T15:22:35+08:00"
+              content="2017-06-05" >
+          06-05
+        </time>
+      </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+    </header>
   </article>
 
 
     
-  </section>
+  </div>
 
   
 
