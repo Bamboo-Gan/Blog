@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title></title>
+      <url>/2017/06/10/HTML5/</url>
+      <content type="html"><![CDATA[<p><img src="../uploads/test.jpg" alt="">;</p>
+<h1 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h1><h2 id="HTML5与HTML4的区别"><a href="#HTML5与HTML4的区别" class="headerlink" title="HTML5与HTML4的区别"></a>HTML5与HTML4的区别</h2><h3 id="HTML5要解决的三个问题"><a href="#HTML5要解决的三个问题" class="headerlink" title="HTML5要解决的三个问题"></a>HTML5要解决的三个问题</h3><ol>
+<li><p>web浏览器之间的兼容性很低。</p>
+<p> <code>规范不统一，没有标准化</code></p>
+</li>
+<li><p>文档结构不够明确 </p>
+<p> <code>div标签的过多使用，文档结构不清晰</code> </p>
+</li>
+<li><p>web应用程序功能受到限制 </p>
+<p> <code>H5 提供新的API，原来连文件的多个上传都无法做到</code></p>
+</li>
+</ol>
+<h3 id="一、语法的改变"><a href="#一、语法的改变" class="headerlink" title="一、语法的改变"></a>一、语法的改变</h3><ol>
+<li>H5中的标记方法 </li>
+</ol>
+<ul>
+<li><p>DOCTYPE声明</p>
+<p>   <code>在H5中不实用版本声明，DOCTYPE声明方法不区分大小写</code></p>
+<p>  <code>&lt;!DOCTYPE html stystem &#39;about:legacy-compat&#39;&gt;</code><br>  <code>&lt;!--也可以这样书写：--&gt;</code><br>  <code>&lt;!DOCTYPE HTML&gt;</code></p>
+</li>
+<li><p>指定字符编码 </p>
+<p>  <code>在H5中指定字符编码可以这样：&lt;meta charset= &quot;UTF-8&quot;/&gt;,不可以与H4的方式一起使用</code></p>
+</li>
+</ul>
+<ol>
+<li>可以省略标记的元素 </li>
+</ol>
+<ul>
+<li><p>单标签 不允许写结束标签的元素</p>
+<ul>
+<li><code>area, base, br, col, command, embed, hr, img, ipnut, keygen, link, meta, param, source, track</code></li>
+</ul>
+</li>
+<li><p>可以省略结束标记的元素</p>
+<ul>
+<li><code>li, dt, dd, p, rt, rp, optgroup, option, thead, tbody, tr, td, th</code></li>
+</ul>
+</li>
+<li><p>可以省略全部标记的元素</p>
+<ul>
+<li><code>html, head, body, colgroup, tbody</code></li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>具有布尔类型值的属性 </li>
+</ol>
+<ul>
+<li>readonly, disabled, checked, sekected等，注意属性值为空字符串，代表的属性值是true</li>
+</ul>
+<ol>
+<li>省略引号 </li>
+</ol>
+<ul>
+<li>当属性值不包括空字符串，”&lt;”,”&gt;”,”=”,单引号，双引号等字符时，属性值两边的引号可以省略</li>
+</ul>
+<ol>
+<li>新增的元素和废除的元素 </li>
+</ol>
+<ul>
+<li><p>新增结构相关元素：<code>section, article, aside, header, hgroup, footer, nav, figure, figcaption</code></p>
+</li>
+<li><p>新增其他元素： <code>video, audio, embed, mark, progress, time, ruby, rt, rp, wbr, canvas, command, details,summary, datalist, datagrid, keygen, output, source, manu</code></p>
+</li>
+<li><p>新增的input元素的类型：<code>emal, url, number, range, DatePicker</code></p>
+</li>
+<li><p>废除的元素：</p>
+<ul>
+<li><p>能使用css替代的元素<br>例如：basefont,big, center, font, s, strike, tt, u</p>
+<ul>
+<li><p>不再使用frame框架【frameset,frame,noframe元素】 H5只支持iframe框架</p>
+</li>
+<li><p>部分浏览器支持的元素被废除，IE支持的bgsound和marquee，可以被audio和js编程替代，applet元素可以被embed替代</p>
+</li>
+<li>其他被废除的有新替代的元素：rb–ruby，acronym–abbr，dir–ul，plaintext–text/plain</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>新增的属性和被废除的属性</li>
+</ol>
+<p><a href="www.baidu.com">百度</a>;</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[关于自增（自减）运算的一点问题]]></title>
+      <url>/2017/06/05/%E5%85%B3%E4%BA%8E%E8%87%AA%E5%A2%9E%EF%BC%88%E8%87%AA%E5%87%8F%EF%BC%89%E8%BF%90%E7%AE%97%E7%9A%84%E4%B8%80%E7%82%B9%E9%97%AE%E9%A2%98/</url>
+      <content type="html"><![CDATA[<h1 id="关于自增和自减运算的一点问题"><a href="#关于自增和自减运算的一点问题" class="headerlink" title="关于自增和自减运算的一点问题"></a>关于自增和自减运算的一点问题</h1><h2 id="问题的引出"><a href="#问题的引出" class="headerlink" title="问题的引出"></a>问题的引出</h2><p>先来看一段代码 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">var b = ++a + ++a;</div><div class="line">console.log(a); // 3</div><div class="line">console.log(b); //5</div></pre></td></tr></table></figure>
+<blockquote>
+<p>分析：这里a的计算过程很简单，第一个a是前置自增，所以一开始参与运算就自己变成2，后面一个a也是一样，但是第二个a的值自增之前已经是2了，所以自增之后就是3，那么赋值给b就是2+3=5了；而a的最终值是最后一次自增后的3.</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">var b = a++ + ++a;</div><div class="line">console.log(a) // 3</div><div class="line">console.log(b); //4</div><div class="line">//b=  1 + (2+1) </div><div class="line">//a = 1 + 2</div></pre></td></tr></table></figure>
+<blockquote>
+<p>分析：这里的第一个a由于是后置自增，按照运算的优先级来说是先进行计算的，第二优先级是前置自增，然后是+,最后才是赋值，但是有个问题：后置自增运算遵循的是递增操作是在整个语句求值之后执行的。那么，首先需要弄清出这里所说的整个语句求值之后具体是指哪个或者哪部分或者是赋值之前的后面所有语句？且按下不表.我们先看这段代码，这么分析，第一个a的值是先不进行自增计算的，也就是+号之前的a = 1，越过+号之后第二个前置自增的a，在没有进行自增之前到底是几？1 or 2？正确应该是2，第一个a在之前没有进行自增运算，但是到了第二个a这里的时候，第一个a遗留的自增运算已经结束，变成2了，那么在此基础上a进行最后一次自增就变成3，即a = 3. b的计算过程是b = 1 + 3 = 4. 这里我们不妨，做一下变换假如第二个a也是后置自增运算呢？那么第二个a参与加法运算的时候就是2，b的值就是 1 + 2 = 3了，而a的值会在加法结束之后自增变成3。</p>
+</blockquote>
+<p>注：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence" target="_blank" rel="external">MDN上关于运算的优先级</a></p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">var b = a++ + a++;</div><div class="line">console.log(a) //3</div><div class="line">console.log(b); //3</div><div class="line">//b = 1 + 2 =3</div><div class="line">//a = 1 + 1 + 1 == &gt; 3</div></pre></td></tr></table></figure>
+<blockquote>
+<p>分析：见上一条分析最后。这里有其他的观点指出后置自增运算可以看作是最后才进行自增运算的，像本例子两个完全一样的a后置自增，认为是1+1之后最后一个a再自增两次变成3的。然而实际并非如此。这里的a的自增运算并非最后一举自增两次形成，而是依次执行的，因而可以说上例说的整个执行语句指的就是，下一个运算符（+）之前的语句。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">var b = ++a + a++;</div><div class="line">console.log(a) //3 1+1+1</div><div class="line">console.log(b); //4</div></pre></td></tr></table></figure>
+<blockquote>
+<p>分析：第一个前置自增a先自增运算后a = 2，下一个a，能参与加法运算的也就是当前的2，所以b赋值是 2+2 =4.而a由于最后一次自增是后置，所以是前面运算完毕之后，在2的基础上自增1，a=3. </p>
+</blockquote>
+<h2 id="验证的时刻-能够鉴别之前想法是否正确"><a href="#验证的时刻-能够鉴别之前想法是否正确" class="headerlink" title="验证的时刻 (能够鉴别之前想法是否正确)"></a>验证的时刻 (能够鉴别之前想法是否正确)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">var b = 2;</div><div class="line">a++;</div><div class="line">var num = ++a + a++ + a + ++b + b++;</div><div class="line">//          3   3     4     3   3</div><div class="line">console.log(num); // 16</div><div class="line">console.log(a); //4</div><div class="line">console.log(b); //4</div></pre></td></tr></table></figure>
+<blockquote>
+<p>分析：声明a变量赋值为1，紧接着a就有一个后置自增运算，幸运的是a没有参与到其他运算中，所以分号之后的a就变成2了。num中第一个前置自增a的值立马变成3，第一个加号之后的a由于是后置自增，在当前运算语句中是不能先自增的所以，此时的a值是前一个a的值即3，那么到第三个a出现的时候，第二个a的自增运算已经完成了，所以此时的a=4，同理可得b的第一个值是3，第二个b当前参与加法运算的值是3，但是运算完之后就自增变成4了。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var i = 1;</div><div class="line">var j = 1;</div><div class="line">var a = i++ + i++ + i++ + i++ + i++ + i++ + i++; // 7个</div><div class="line">//      1 + 2 + 3 + 4 + 5 + 6 + 7</div><div class="line">var b = ++j + ++j + ++j + ++j + ++j + ++j + ++j;</div><div class="line">console.log(a); //28</div><div class="line">console.log(i) //8</div><div class="line">console.log(b); // 2+3+4+5+6+7+8 =35</div><div class="line">console.log(j) // 8</div></pre></td></tr></table></figure>
+<blockquote>
+<p>再来更多一些，由于b的运算比较简单，不再赘述。看看a和i的变化，a总共有i的7次后置自增运算相加，第一个i后置自增，当前是1参与加法运算，后置可以理解为滞后一次自增，即当前参与运算不自增，第二个i累加了上一次i没有进行的自增，变成2，依次类推，a的运算过程是1+2+3+4+5+6+7=28，最后一个i是7，这是参与加法运算的i的值，还有一次后置自增，所以i的值最终结果是8.</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var i = 1;</div><div class="line">var b = i++ + ++i * i++ + i--;</div><div class="line">//var b = i++ + ++i * (i++ + i--);</div><div class="line">//        1       3 * 3     4</div><div class="line">//        1       3 * (3 + 4) </div><div class="line">// i = 3, b = 14</div><div class="line">// i = 3, b = 22</div><div class="line">console.log(i);</div><div class="line">console.log(b);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>再来看一点好玩的，按照运算的优先级，i++(i–) &gt; ++i &gt; <em> &gt; + ,虽然有优先运算规则，但是i的运算过程是自左向右的，i的值是时刻变化的，后置自增遵循滞后一次自增，不难得出b运算中的第一个i是1，那为什么第二个变成了3呢？第二个i前置自增之前就已经是2了，自己再自增一次就变成3了，</em> 后面同样是后置自增，参与运算的自然是前一个i的值3，最后一个i需要先承接上一个i后置自增的后果变成4，等整个加法运算结束之后本身自减1，变成3，所以b的运算过程是1+3 <em> 3+4，i=3.我们可以验证一下i的变化或者自身运算是不是自左向右的，提升最后一个加法的优先级括起来，按照之前的思路分析，得出b的运算过程是1+3</em>(3+4)=22,可以打印一下验证是正确的。</p>
+</blockquote>
+<h5 id="总结：1-后置自增运算是滞后一次自增，当前参与的运算不自增；"><a href="#总结：1-后置自增运算是滞后一次自增，当前参与的运算不自增；" class="headerlink" title="总结：1.后置自增运算是滞后一次自增，当前参与的运算不自增；"></a>总结：1.后置自增运算是滞后一次自增，当前参与的运算不自增；</h5><h5 id="2-同一变量的自增运算过程是自左向右的。"><a href="#2-同一变量的自增运算过程是自左向右的。" class="headerlink" title="2.同一变量的自增运算过程是自左向右的。"></a>2.同一变量的自增运算过程是自左向右的。</h5>]]></content>
+      
+        
+        <tags>
+            
+            <tag> javascript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
+</search>
