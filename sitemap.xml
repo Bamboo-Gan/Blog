@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/06/05/%E5%85%B3%E4%BA%8E%E8%87%AA%E5%A2%9E%EF%BC%88%E8%87%AA%E5%87%8F%EF%BC%89%E8%BF%90%E7%AE%97%E7%9A%84%E4%B8%80%E7%82%B9%E9%97%AE%E9%A2%98/</loc>
+    
+    <lastmod>2017-06-13T13:39:32.250Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/categories/%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE/index.html</loc>
     
     <lastmod>2017-06-13T13:04:39.243Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://yoursite.com/categories/index.html</loc>
     
     <lastmod>2017-06-13T07:56:02.336Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/06/05/%E5%85%B3%E4%BA%8E%E8%87%AA%E5%A2%9E%EF%BC%88%E8%87%AA%E5%87%8F%EF%BC%89%E8%BF%90%E7%AE%97%E7%9A%84%E4%B8%80%E7%82%B9%E9%97%AE%E9%A2%98/</loc>
-    
-    <lastmod>2017-06-05T07:54:28.315Z</lastmod>
     
   </url>
   
