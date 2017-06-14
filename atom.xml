@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bamboo-gan.github.io/"/>
-  <updated>2017-06-13T19:37:06.797Z</updated>
+  <updated>2017-06-14T05:22:41.225Z</updated>
   <id>http://bamboo-gan.github.io/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>春天在哪里</title>
+    <link href="http://bamboo-gan.github.io/2017/06/14/%E6%98%A5%E5%A4%A9%E5%9C%A8%E5%93%AA%E9%87%8C/"/>
+    <id>http://bamboo-gan.github.io/2017/06/14/春天在哪里/</id>
+    <published>2017-06-14T05:18:53.000Z</published>
+    <updated>2017-06-14T05:22:41.225Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="../uploads/少司命.jpg" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;../uploads/少司命.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="测试" scheme="http://bamboo-gan.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="动漫" scheme="http://bamboo-gan.github.io/tags/%E5%8A%A8%E6%BC%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>关于自增（自减）运算的一点问题</title>
