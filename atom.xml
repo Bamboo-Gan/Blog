@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>silverbamboo</title>
   
-  <link href="/atom.xml" rel="self"/>
+  <link href="/blog/atom.xml" rel="self"/>
   
-  <link href="http://bamboo-gan.github.io/"/>
+  <link href="http://bamboo-gan.github.io/blog/"/>
   <updated>2017-06-14T07:28:13.670Z</updated>
-  <id>http://bamboo-gan.github.io/</id>
+  <id>http://bamboo-gan.github.io/blog/</id>
   
   <author>
     <name>Bamboo Gan</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>春天在哪里</title>
-    <link href="http://bamboo-gan.github.io/2017/06/14/%E6%98%A5%E5%A4%A9%E5%9C%A8%E5%93%AA%E9%87%8C/"/>
-    <id>http://bamboo-gan.github.io/2017/06/14/春天在哪里/</id>
+    <link href="http://bamboo-gan.github.io/blog/2017/06/14/%E6%98%A5%E5%A4%A9%E5%9C%A8%E5%93%AA%E9%87%8C/"/>
+    <id>http://bamboo-gan.github.io/blog/2017/06/14/春天在哪里/</id>
     <published>2017-06-14T05:18:53.000Z</published>
     <updated>2017-06-14T07:28:13.670Z</updated>
     
@@ -35,17 +35,17 @@
     
     </summary>
     
-      <category term="测试" scheme="http://bamboo-gan.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
+      <category term="测试" scheme="http://bamboo-gan.github.io/blog/categories/%E6%B5%8B%E8%AF%95/"/>
     
     
-      <category term="动漫" scheme="http://bamboo-gan.github.io/tags/%E5%8A%A8%E6%BC%AB/"/>
+      <category term="动漫" scheme="http://bamboo-gan.github.io/blog/tags/%E5%8A%A8%E6%BC%AB/"/>
     
   </entry>
   
   <entry>
     <title>关于自增（自减）运算的一点问题</title>
-    <link href="http://bamboo-gan.github.io/2017/06/05/%E5%85%B3%E4%BA%8E%E8%87%AA%E5%A2%9E%EF%BC%88%E8%87%AA%E5%87%8F%EF%BC%89%E8%BF%90%E7%AE%97%E7%9A%84%E4%B8%80%E7%82%B9%E9%97%AE%E9%A2%98/"/>
-    <id>http://bamboo-gan.github.io/2017/06/05/关于自增（自减）运算的一点问题/</id>
+    <link href="http://bamboo-gan.github.io/blog/2017/06/05/%E5%85%B3%E4%BA%8E%E8%87%AA%E5%A2%9E%EF%BC%88%E8%87%AA%E5%87%8F%EF%BC%89%E8%BF%90%E7%AE%97%E7%9A%84%E4%B8%80%E7%82%B9%E9%97%AE%E9%A2%98/"/>
+    <id>http://bamboo-gan.github.io/blog/2017/06/05/关于自增（自减）运算的一点问题/</id>
     <published>2017-06-05T07:22:35.000Z</published>
     <updated>2017-06-13T19:37:06.797Z</updated>
     
@@ -92,10 +92,10 @@
     
     </summary>
     
-      <category term="前端学习" scheme="http://bamboo-gan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+      <category term="前端学习" scheme="http://bamboo-gan.github.io/blog/categories/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="javascript" scheme="http://bamboo-gan.github.io/tags/javascript/"/>
+      <category term="javascript" scheme="http://bamboo-gan.github.io/blog/tags/javascript/"/>
     
   </entry>
   

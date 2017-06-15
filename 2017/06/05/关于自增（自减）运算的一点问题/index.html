@@ -9,7 +9,7 @@
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于自增（自减）运算的一点问题">
-<meta property="og:url" content="http://bamboo-gan.github.io/2017/06/05/关于自增（自减）运算的一点问题/index.html">
+<meta property="og:url" content="http://bamboo-gan.github.io/blog/2017/06/05/关于自增（自减）运算的一点问题/index.html">
 <meta property="og:site_name" content="silverbamboo">
 <meta property="og:description" content="关于自增和自减运算的一点问题问题的引出先来看一段代码  1234var a = 1;var b = ++a + ++a;console.log(a); // 3console.log(b); //5  分析：这里a的计算过程很简单，第一个a是前置自增，所以一开始参与运算就自己变成2，后面一个a也是一样，但是第二个a的值自增之前已经是2了，所以自增之后就是3，那么赋值给b就是2+3=5了；而a的最终">
 <meta property="og:updated_time" content="2017-06-13T19:37:06.797Z">
@@ -20,24 +20,24 @@
     <link rel="alternative" href="/atom.xml" title="silverbamboo" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.png">
+    <link rel="icon" href="/blog//img/favicon.ico">
   
   
       <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
   
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/blog/css/style.css">
+  <link rel="stylesheet" href="/blog/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/blog/apple-touch-icon.png">
   
   
-      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+      <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
   
   <!-- 加载特效 -->
-    <script src="/js/pace.js"></script>
-    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+    <script src="/blog/js/pace.js"></script>
+    <link href="/blog/css/pace/pace-theme-flash.css" rel="stylesheet" />
   <script>
       var yiliaConfig = {
-          rootUrl: '/',
+          rootUrl: '/blog/',
           fancybox: true,
           animate: true,
           isHome: false,
@@ -55,17 +55,21 @@
     <div class="overlay"></div>
 <div class="intrude-less">
     <header id="header" class="inner">
-        <a href="/" class="profilepic">
+        <a href="/blog/" class="profilepic">
             
-            <img lazy-src="/img/head.jpg" class="js-avatar">
+            <img lazy-src="/blog//img/avatar.png" class="js-avatar">
             
         </a>
 
         <hgroup>
-          <h1 class="header-author"><a href="/" title="Hi Mate">Bamboo Gan</a></h1>
+          <h1 class="header-author"><a href="/blog/" title="Hi Mate">Bamboo Gan</a></h1>
         </hgroup>
 
         
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="search" placeholder=" Search...">
+            </form>
         
         
             <div id="switch-btn" class="switch-btn">
@@ -115,13 +119,19 @@
                     <nav class="header-menu">
                         <ul>
                         
-                            <li><a href="/Home">博客首页</a></li>
+                            <li><a href="/blog/">博客主页</a></li>
                         
-                            <li><a href="/works">作品展示</a></li>
+                            <li><a href="/blog/FrontEndGuide/">前端导航</a></li>
                         
-                            <li><a href="/about">留言打卡</a></li>
+                            <li><a href="/blog/archives/">所有文章</a></li>
                         
-                            <li><a href="/FrontEndGuide">前端导航</a></li>
+                            <li><a href="/blog/projects/">我的项目</a></li>
+                        
+                            <li><a href="/blog/resume/">个人简历</a></li>
+                        
+                            <li><a href="/blog/about/">关于我</a></li>
+                        
+                            <li><a href="/blog/tags/">标签云&amp;分类</a></li>
                         
                         </ul>
                     </nav>
@@ -130,11 +140,11 @@
                             
                                 <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
                             
-                                <a class="fl github" target="_blank" href="https://github.com/luuman" title="github">github</a>
+                                <a class="fl github" target="_blank" href="https://github.com/Bamboo-Gan" title="github">github</a>
                             
                                 <a class="fl zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
                             
-                                <a class="fl weibo" target="_blank" href="#" title="weibo">weibo</a>
+                                <a class="fl weibo" target="_blank" href="http://weibo.com/2349407907/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
                             
                                 <a class="fl google" target="_blank" href="#" title="google">google</a>
                             
@@ -149,7 +159,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/动漫/" style="font-size: 10px;">动漫</a>
+                        <a href="/blog/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/blog/tags/动漫/" style="font-size: 10px;">动漫</a>
                     </div>
                 </section>
                 
@@ -158,7 +168,9 @@
                 <section class="switch-part switch-part3">
                     <div id="js-friends">
                     
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://luuman.github.io/">name</a>
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://git.oschina.net/">码云</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://gitlab.com/Bamboo-Gan/silverbamboo">gitlab</a>
                     
                     </div>
                 </section>
@@ -168,7 +180,7 @@
                 
                 <section class="switch-part switch-part4">
                 
-                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
+                    <div id="js-aboutme">就不告诉你！！！</div>
                 </section>
                 
             </div>
@@ -180,29 +192,35 @@
       <nav id="mobile-nav">
       <div class="overlay">
           <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">Bamboo Gan</a></h1>
+          <h1 class="header-author js-mobile-header hide"><a href="/blog/" title="Me">Bamboo Gan</a></h1>
       </div>
     <div class="intrude-less">
         <header id="header" class="inner">
-            <a href="/" class="profilepic">
+            <a href="/blog/" class="profilepic">
                 
-                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                    <img lazy-src="/blog//img/avatar.png" class="js-avatar">
                 
             </a>
             <hgroup>
-              <h1 class="header-author"><a href="/" title="Me">Bamboo Gan</a></h1>
+              <h1 class="header-author"><a href="/blog/" title="Me">Bamboo Gan</a></h1>
             </hgroup>
             
             <nav class="header-menu">
                 <ul>
                 
-                    <li><a href="/Home">博客首页</a></li>
+                    <li><a href="/blog/">博客主页</a></li>
                 
-                    <li><a href="/works">作品展示</a></li>
+                    <li><a href="/blog/FrontEndGuide/">前端导航</a></li>
                 
-                    <li><a href="/about">留言打卡</a></li>
+                    <li><a href="/blog/archives/">所有文章</a></li>
                 
-                    <li><a href="/FrontEndGuide">前端导航</a></li>
+                    <li><a href="/blog/projects/">我的项目</a></li>
+                
+                    <li><a href="/blog/resume/">个人简历</a></li>
+                
+                    <li><a href="/blog/about/">关于我</a></li>
+                
+                    <li><a href="/blog/tags/">标签云&amp;分类</a></li>
                 
                 <div class="clearfix"></div>
                 </ul>
@@ -212,11 +230,11 @@
                     
                         <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
                     
-                        <a class="github" target="_blank" href="https://github.com/luuman" title="github">github</a>
+                        <a class="github" target="_blank" href="https://github.com/Bamboo-Gan" title="github">github</a>
                     
                         <a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
                     
-                        <a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+                        <a class="weibo" target="_blank" href="http://weibo.com/2349407907/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
                     
                         <a class="google" target="_blank" href="#" title="google">google</a>
                     
@@ -232,7 +250,7 @@
       <div class="body-wrap"><article id="post-关于自增（自减）运算的一点问题" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/06/05/关于自增（自减）运算的一点问题/" class="article-date">
+      <a href="/blog/2017/06/05/关于自增（自减）运算的一点问题/" class="article-date">
       <time datetime="2017-06-05T07:22:35.000Z" itemprop="datePublished">2017-06-05</time>
 </a>
     </div>
@@ -255,13 +273,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/前端学习/">前端学习</a>
+    <a class="article-category-link" href="/blog/categories/前端学习/">前端学习</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/javascript/">javascript</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -357,14 +375,14 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/06/05/关于自增（自减）运算的一点问题/">关于自增（自减）运算的一点问题</a></p>
-        <p><span>文章作者:</span><a href="/" title="访问 Bamboo Gan 的个人博客">Bamboo Gan</a></p>
+        <p><span>本文标题:</span><a href="/blog/2017/06/05/关于自增（自减）运算的一点问题/">关于自增（自减）运算的一点问题</a></p>
+        <p><span>文章作者:</span><a href="/blog/" title="访问 Bamboo Gan 的个人博客">Bamboo Gan</a></p>
         <p><span>发布时间:</span>2017年06月05日 - 15时22分</p>
         <p><span>最后更新:</span>2017年06月14日 - 03时37分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/06/05/关于自增（自减）运算的一点问题/" title="关于自增（自减）运算的一点问题">http://bamboo-gan.github.io/2017/06/05/关于自增（自减）运算的一点问题/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://bamboo-gan.github.io/2017/06/05/关于自增（自减）运算的一点问题/　　作者: Bamboo Gan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script src="/js/clipboard.min.js"></script>
+            <span>原始链接:</span><a class="post-url" href="/blog/2017/06/05/关于自增（自减）运算的一点问题/" title="关于自增（自减）运算的一点问题">http://bamboo-gan.github.io/blog/2017/06/05/关于自增（自减）运算的一点问题/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://bamboo-gan.github.io/blog/2017/06/05/关于自增（自减）运算的一点问题/　　作者: Bamboo Gan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/blog/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -376,7 +394,7 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/06/14/春天在哪里/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/2017/06/14/春天在哪里/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
@@ -433,42 +451,27 @@
 	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
 	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
 </div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/blog/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 
 
-    
-        <div id="gitments"></div>
-<script src="/js/gitment.browser.js"></script>
-<script>
-    var gitment = new Gitment({
-      id: window.location.pathname,
-      owner: 'luuman',
-      repo: 'luuman.github.io',
-      oauth: {
-        client_id: 'null',
-        client_secret: 'null',
-      },
-    })
-    gitment.render('gitments')
-</script>
     
 
 
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/06/14/春天在哪里/" title="上一篇: 春天在哪里">
+            <a href="/blog/2017/06/14/春天在哪里/" title="上一篇: 春天在哪里">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/blog/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/06/14/春天在哪里/">春天在哪里</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/05/关于自增（自减）运算的一点问题/">关于自增（自减）运算的一点问题</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/blog/2017/06/14/春天在哪里/">春天在哪里</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/06/05/关于自增（自减）运算的一点问题/">关于自增（自减）运算的一点问题</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
@@ -508,7 +511,7 @@
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >海贼到访数: 
+                        <span id="site-visit" >远方的脚印👣数: 
                             <span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
@@ -530,12 +533,12 @@
 
     </div>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-<script src="/js/main.js"></script>
+<script src="/blog/js/main.js"></script>
 
     <script>
         $(document).ready(function() {
             var backgroundnum = 24;
-            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            var backgroundimg = "url(/blog/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
             $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
             $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
         })
@@ -587,6 +590,23 @@
     });
 </script>
 
+
+    <script type="text/javascript">
+      window.onload = function(){
+        document.getElementById("search").onclick = function(){
+            console.log("search")
+            search();
+        }
+      }
+      function search(){
+        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+        _st('install','A1Pz-LKMXbrzcFg2FWi6','2.0.0');
+      }
+    </script>
 
   </div>
 </body>
